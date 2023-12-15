@@ -10,7 +10,7 @@ Testing core functions from library
 
 floorplan_lib_path = os.path.dirname(os.path.realpath(__file__)) + "/../../"
 example_image_path = (
-    os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/example.png"
+    os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/01.png"
 )
 
 

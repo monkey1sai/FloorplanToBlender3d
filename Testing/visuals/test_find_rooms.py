@@ -10,7 +10,7 @@ except ImportError:
 
 
 def test_find_rooms_in_image():
-    img = cv2.imread(sys.path[1] + "/../../Images/Examples/example.png")
+    img = cv2.imread(sys.path[1] + "/../../Images/Examples/demo1.png")
     height, width, _ = img.shape
     blank_image = np.zeros(
         (height, width, 3), np.uint8
@@ -40,3 +40,5 @@ def test_find_rooms_in_image():
     draw.image(gray, wait=10)
 
     assert True  # got to end successfully
+
+test_find_rooms_in_image()

@@ -4,9 +4,10 @@ import cv2
 import numpy as np
 import os
 import sys
+floorplan_lib_path = os.path.dirname(os.path.realpath(__file__)) + "/../../"
 
 try:
-    sys.path.insert(1, sys.path[0] + "/../..")
+    sys.path.insert(1, floorplan_lib_path)
     from FloorplanToBlenderLib import *  # floorplan to blender lib
 except ImportError as e:
     print(e)
@@ -15,7 +16,7 @@ except ImportError as e:
 
 def main():
     # Get preferred pixel per wall size
-    path = os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/example.png"
+    path = os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/demo1.png"
     img = cv2.imread(path)
     preferred = calculate_wall_width_average(img)
 

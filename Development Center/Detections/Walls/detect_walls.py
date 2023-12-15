@@ -2,14 +2,14 @@
 Test function from stackoverflow
 https://stackoverflow.com/questions/55356251/how-to-detect-doors-and-windows-from-a-floor-plan-image
 """
-
+# 極度重要 !!!!!
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 
 example_image_path = (
-    os.path.dirname(os.path.realpath(__file__)) + "/../../../Images/Examples/example.png"
+    os.path.dirname(os.path.realpath(__file__)) + "/../../../Images/Examples/01.png"
 )
 
 img = cv2.imread(example_image_path)

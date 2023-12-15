@@ -11,7 +11,7 @@ import os
 
 floorplan_lib_path = os.path.dirname(os.path.realpath(__file__)) + "/../../"
 example_image_path = (
-    os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/example.png"
+    os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/0_1.png"
 )
 
 
@@ -89,7 +89,7 @@ def test(path):
     boxes, blank_image = detect.precise_boxes(
         gray_details, blank_image, color=(0, 200, 100)
     )
-
+    cv2.namedWindow("detection", cv2.WINDOW_GUI_NORMAL)
     cv2.imshow("detection", blank_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()

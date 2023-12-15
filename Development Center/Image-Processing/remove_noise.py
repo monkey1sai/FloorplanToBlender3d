@@ -12,14 +12,19 @@ from PIL import Image
 
 def main():
     example_image_path = (
-        os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/example.png"
+        os.path.dirname(os.path.realpath(__file__)) + "/../../Images/Examples/demo1.png"
     )
 
     img = cv2.imread(example_image_path)
 
     dst = cv2.fastNlMeansDenoisingColored(img, None, 10, 10, 7, 21)
 
+    cv2.namedWindow("origin", 0)
+    cv2.resizeWindow("origin", 600,600)
     cv2.imshow("origin", img)
+
+    cv2.namedWindow("denoised", 0)
+    cv2.resizeWindow("denoised", 600,600)    
     cv2.imshow("denoised", dst)
     cv2.waitKey(0)
 

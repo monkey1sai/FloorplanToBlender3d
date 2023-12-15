@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 import sys
-
+# 極度重要 !!!!!
 try:
     sys.path.insert(1, sys.path[0] + "/../../..")
     print(sys.path)
@@ -14,7 +14,7 @@ except ImportError as e:
 
 def main():
     example_image_path = (
-        os.path.dirname(os.path.realpath(__file__)) + "/../../../Images/Examples/example.png"
+        os.path.dirname(os.path.realpath(__file__)) + "/../../../Images/Examples/01.png"
     )
     # Read floorplan image
     img = cv2.imread(example_image_path)
